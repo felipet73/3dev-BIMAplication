@@ -16,6 +16,7 @@ import Draggable from './DialogA';
 import DraggableB from './DialogB';
 import DefaultMaps from './Map';
 import Today from './today';
+import { ViewerSc } from './ViewerSc';
 
 
 export let expensedata: any[] = [
@@ -103,7 +104,7 @@ const SEODashboard = () => {
         args.maps.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)).replace(/contrast/i, 'Contrast').replace(/-dark/i, "Dark")  as MapsTheme;
     };*/
     
-    const cellSpacing: number [] = [5,5];
+    const cellSpacing: number [] = [1,1];
 
     const card1 = () => {
         return(
@@ -175,7 +176,7 @@ const SEODashboard = () => {
         );
     }
 
-    const visitorsChart = () => {
+    /*const visitorsChart = () => {
         return(
             <div style={{height:"100%", width:"100%"}}>
                 <ChartComponent id='visitorsChart' style={{ textAlign: "center" }} load={Chartload.bind(this)} legendSettings={{visible: false}} primaryXAxis={{ valueType: 'DateTime', labelFormat: 'y', majorGridLines: { width: 0 }, intervalType: 'Years', edgeLabelPlacement: 'Shift' }} primaryYAxis={{ labelFormat: '{value}%', lineStyle: { width: 0 }, maximum: 4, interval: 1, majorTickLines: { width: 0 }, minorTickLines: { width: 0 } }} chartArea={{ border: { width: 0 } }}>
@@ -187,7 +188,16 @@ const SEODashboard = () => {
                 </ChartComponent>
             </div>
         );
+    }*/
+
+    const visitorsChart = () => {
+        return(
+            <div style={{height:"100%", width:"100%"}}>
+                {/* <ViewerSc/> */}
+            </div>
+        );
     }
+
 
     const pieChart = () => {
         const pieChartData: any[] = [
@@ -255,9 +265,15 @@ const SEODashboard = () => {
                             <div className="dashboardParent">
                                 <DashboardLayoutComponent ref={(scope) => { dashboardObj = scope; }} id="analytic_dashboard" cellAspectRatio={100/100} cellSpacing={cellSpacing} columns={6} allowResizing={true} resizableHandles={resize} resizeStart={onResizeStart.bind(this)} resize={onResize.bind(this)} resizeStop={onResizeStop.bind(this)} created={onCreated.bind(this)} >
                                     <PanelsDirective>
-                                        <PanelDirective sizeX={2} sizeY={1} row={0} col={0} content={card1 as any} ></PanelDirective>
-                                        <PanelDirective sizeX={2} sizeY={2} row={0} col={2} content={card2.bind(this) as any} header="<div>Listado </div>"></PanelDirective>
-                                        <PanelDirective sizeX={2} sizeY={1} row={0} col={4} content={card3 as any}></PanelDirective>
+                                        <PanelDirective sizeX={1} sizeY={0.5} row={0} col={0} content={card1.bind(this) as any} ></PanelDirective>
+                                        <PanelDirective sizeX={1} sizeY={0.5} row={0} col={1} content={card1.bind(this) as any} ></PanelDirective>
+                                        <PanelDirective sizeX={1} sizeY={0.5} row={0} col={2} content={card1.bind(this) as any} ></PanelDirective>
+                                        <PanelDirective sizeX={1} sizeY={0.5} row={0} col={3} content={card1.bind(this) as any} ></PanelDirective>
+                                        <PanelDirective sizeX={1} sizeY={0.5} row={0} col={4} content={card1.bind(this) as any} ></PanelDirective>
+                                        <PanelDirective sizeX={1} sizeY={0.5} row={0} col={5} content={card1.bind(this) as any} ></PanelDirective>
+
+                                        <PanelDirective sizeX={2} sizeY={2} row={1} col={2} content={card2.bind(this) as any} header="<div>Listado </div>"></PanelDirective>
+                                        <PanelDirective sizeX={2} sizeY={1} row={1} col={4} content={card3 as any}></PanelDirective>
                                         <PanelDirective sizeX={2} sizeY={2} row={1} col={0} content={pie.bind(this) as any} header="<div>Active Visitors</div>"></PanelDirective>
                                         {/* <PanelDirective sizeX={2} sizeY={2} row={1} col={2} content={DefaultMaps.bind(this) as any} header="<div>Regional Map</div>"></PanelDirective>  */}
                                         <PanelDirective sizeX={2} sizeY={2} row={1} col={4} content={colChart.bind(this) as any} header="<div>Visitors by Type</div>"></PanelDirective>

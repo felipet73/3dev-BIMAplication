@@ -10,8 +10,8 @@ const Today = () => {
                                 <div className="e-card" id="weather_card" >
                                     <div className="e-card-header">
                                         <div className="e-card-header-caption">
-                                            <div className="e-card-header-title">Today</div>
-                                            <div className="e-card-sub-title">New York - Scattered Showers.</div>
+                                            <div className="e-card-header-title">Hoy</div>
+                                            <div className="e-card-sub-title">Cuenca - Ecuador.</div>
                                         </div>
                                     </div>
                                     <div className="e-card-header weather_report">
@@ -19,6 +19,8 @@ const Today = () => {
                                         <div className="e-card-header-caption">
                                             <div className="e-card-header-title">1&#186; / -4&#186;</div>
                                             <div className="e-card-sub-title">Chance for snow: 100%</div>
+                                            <div className="e-card-sub-title">Chance </div>
+                                            <div className="e-card-sub-title">Chance </div>
                                         </div>
                                     </div>
                                 </div>

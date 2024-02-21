@@ -17,56 +17,56 @@ const SidebarWithMenu = ({trogle, setCambios}:Prps) => {
     let sidebarobj = useRef<SidebarComponent>(null);
     let menuItems: MenuItemModel[] = [
         {
-            text: 'Principal',
+            text: 'Home',
             iconCss: 'icon-up-hand icon',
-            items: [
+            /*items: [
                 { text: 'Personal' },
                 { text: 'Trabajo' }
-            ]
+            ]*/
         },
         {
-            text: 'Aplicaciones',
+            text: 'ERP',
             iconCss: 'icon-bell-alt icon',
-            items: [
+            /*items: [
                 { text: 'Change Profile' },
                 { text: 'Add Name' },
                 { text: 'Add Details' }
-            ]
+            ]*/
         },
         {
-            text: 'Educacion',
+            text: 'Learn',
             iconCss: 'icon-tag icon',
-            items: [
+            /*items: [
                 { text: 'Message' },
                 { text: 'Facebook' },
                 { text: 'Twitter' }
-            ]
+            ]*/
         },
         {
-            text: 'Recursos',
+            text: 'Utils',
             iconCss: 'icon-comment-inv-alt2 icon',
-            items: [
+            /*items: [
                 { text: 'Category1' },
                 { text: 'Category2' },
                 { text: 'Category3' }
-            ]
+            ]*/
         },
         {
-            text: 'Directorios',
+            text: 'Catalags',
             iconCss: 'icon-bookmark icon',
-            items: [
+            /*items: [
                 { text: 'All Comments' },
                 { text: 'Add Comments' },
                 { text: 'Delete Comments' }
-            ]
+            ]*/
         },
         {
-            text: 'Publicaciones',
+            text: 'Pubs',
             iconCss: 'icon-picture icon',
-            items: [
+            /*items: [
                 { text: 'Add Name' },
                 { text: 'Add Mobile Number' }
-            ]
+            ]*/
         },
         /*{
             text: 'Users ',
