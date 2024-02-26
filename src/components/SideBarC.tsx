@@ -6,7 +6,6 @@ import { MenuComponent, MenuItemModel } from '@syncfusion/ej2-react-navigations'
 import './sidebar-menu.css';
 import SEODashboard from './DashBoardP';
 
-
 interface Prps{
     trogle:boolean;
     setCambios:React.Dispatch<React.SetStateAction<boolean>>;
@@ -15,58 +14,59 @@ interface Prps{
 
 const SidebarWithMenu = ({trogle, setCambios}:Prps) => {
     let sidebarobj = useRef<SidebarComponent>(null);
+    
+    const [content, SetContent] = React.useState('');
+
     let menuItems: MenuItemModel[] = [
         {
             text: 'Home',
             iconCss: 'icon-up-hand icon',
-            /*items: [
-                { text: 'Personal' },
-                { text: 'Trabajo' }
-            ]*/
+            items: [
+                { text: 'Home Dashboard' }
+            ]
         },
+        {
+            text: 'Code Generator',
+            iconCss: 'icon-bell-alt icon',
+            items: [
+                { text: 'Code Generator' },
+            ]
+        },
+
         {
             text: 'ERP',
             iconCss: 'icon-bell-alt icon',
-            /*items: [
-                { text: 'Change Profile' },
-                { text: 'Add Name' },
-                { text: 'Add Details' }
-            ]*/
+            items: [
+                { text: 'ERP Applications' },
+            ]
         },
         {
             text: 'Learn',
             iconCss: 'icon-tag icon',
-            /*items: [
-                { text: 'Message' },
-                { text: 'Facebook' },
-                { text: 'Twitter' }
-            ]*/
+            items: [
+                { text: 'Learn' },
+            ]
         },
         {
             text: 'Utils',
             iconCss: 'icon-comment-inv-alt2 icon',
-            /*items: [
-                { text: 'Category1' },
-                { text: 'Category2' },
-                { text: 'Category3' }
-            ]*/
+            items: [
+                { text: 'Utils' },
+            ]
         },
         {
             text: 'Catalags',
             iconCss: 'icon-bookmark icon',
-            /*items: [
-                { text: 'All Comments' },
-                { text: 'Add Comments' },
-                { text: 'Delete Comments' }
-            ]*/
+            items: [
+                { text: 'Catalogs' },
+            ]
         },
         {
             text: 'Pubs',
             iconCss: 'icon-picture icon',
-            /*items: [
-                { text: 'Add Name' },
-                { text: 'Add Mobile Number' }
-            ]*/
+            items: [
+                { text: 'Pubs' },
+            ]
         },
         /*{
             text: 'Users ',
@@ -78,12 +78,11 @@ const SidebarWithMenu = ({trogle, setCambios}:Prps) => {
             ]
         },*/
         {
-            text: 'Configuraciones',
+            text: 'Settings',
             iconCss: 'icon-eye icon',
             items: [
-                { text: 'Change Profile' },
-                { text: 'Add Name' },
-                { text: 'Add Details' }
+                { text: 'Profile Settings' },
+                { text: 'Account Settings' },
             ]
         }
     ];
@@ -99,6 +98,7 @@ const SidebarWithMenu = ({trogle, setCambios}:Prps) => {
             setCambios(state => !state);    
         }, 800);
     }, [trogle])
+    
     
 
     return (
@@ -117,13 +117,17 @@ const SidebarWithMenu = ({trogle, setCambios}:Prps) => {
                 
                 {/* end of main content declaration
                 sidebar element declaration */}
+                
                 <SidebarComponent id="menuSidebar" className="sidebar-menu" ref={sidebarobj} enableDock={enableDock} dockSize={dockSize} width={width} target={target} isOpen={false} type="Auto">
+                
                         <div className="main-menu" >
                             <div className="" style={{ marginTop:'20px' }}>
-                                <MenuComponent id="dockMenu" items={menuItems} orientation='Vertical' cssClass='dock-menu'></MenuComponent>
+                                <MenuComponent id="dockMenu" items={menuItems} orientation='Vertical' cssClass='dock-menu' ></MenuComponent>
                             </div>
                         </div>
+                        
                 </SidebarComponent>
+                
                 <div style={{overflow:'hidden'}}>
                 <SEODashboard/>
                 </div>

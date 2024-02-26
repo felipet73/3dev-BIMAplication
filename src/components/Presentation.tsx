@@ -113,7 +113,7 @@ const Presetation = () => {
                     
                 </div>
             </div>
-            <CardsLearn/>
+            {/* <CardsLearn/> */}
             <CardLearn/>
             <CarouselPubs/>
 
@@ -136,12 +136,10 @@ const Presetation = () => {
                         <div className="row">
                             <div className="col-md-12">
                                 <AppBarComponent style={{ height:'80px' }}>
-                                    
-                                    
-                                    <span className="dense" style={{ marginLeft:'120px' }}>® All rights reserved 3Dev</span>
+                                    <span className="dense" style={{ marginLeft:'120px' }}>® OpenSource Project</span>
                                     <div className="e-appbar-spacer"></div>
-                                    <ButtonComponent cssClass='e-inherit login'>Politias de Privacidad</ButtonComponent>
-                                    <ButtonComponent cssClass='e-inherit login'>Contáctanos</ButtonComponent>
+                                    <ButtonComponent cssClass='e-inherit login'>Privacy policies</ButtonComponent>
+                                    <ButtonComponent cssClass='e-inherit login'>Confidentiality Agreement</ButtonComponent>
                                 </AppBarComponent>
                             </div>
                         </div>

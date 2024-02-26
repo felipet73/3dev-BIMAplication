@@ -28,16 +28,17 @@ const Color = ({ setCambios }: Prps) => {
     }
   }
   const productDropDownButtonItems: ItemModel[] = [
-    { text: 'Developer' },
-    { text: 'Analytics' },
-    { text: 'Reporting' },
-    { text: 'E-Signature' },
-    { text: 'Help Desk' }
+    { text: '3Dev Code Generator' },
+    { text: '3Dev BIM ERP' },
+    { text: '3Dev Learn' },
+    { text: '3Dev Utils' },
+    { text: '3Dev Catalogs' },
+    { text: '3Dev Pubs' }
   ];
 
   const lenguajesDropDownButtonItems: ItemModel[] = [
-    { text: 'Español' },
-    { text: 'Ingles' },
+    { text: 'English' },
+    { text: 'Spanish' },
   ];
 
   const companyDropDownButtonItems: ItemModel[] = [
@@ -98,16 +99,16 @@ const Color = ({ setCambios }: Prps) => {
       {!logeed && <>
         
         
-        <DropDownButtonComponent cssClass={'e-inherit e-appbar-menu ' + 'e-light'} items={productDropDownButtonItems}>Products</DropDownButtonComponent>
-        <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }>Acerca de</ButtonComponent>
-        <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }>Aliados</ButtonComponent>
-        <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }>Políticas de Privacidad</ButtonComponent>
-        <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }>Condiciones Generales</ButtonComponent>
+        <DropDownButtonComponent cssClass={'e-inherit e-appbar-menu ' + 'e-light'} items={productDropDownButtonItems}>Product Information</DropDownButtonComponent>
+        <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }>About</ButtonComponent>
+        <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }>Sponsors</ButtonComponent>
+        {/* <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }></ButtonComponent>
+        <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }>Condiciones Generales</ButtonComponent> */}
         
-        <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }>Contáctanos</ButtonComponent>
+        <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> {} }>Contact us</ButtonComponent>
         <div className='e-appbar-spacer' style={{width:'10%'}}></div>
           
-          <DropDownButtonComponent cssClass={'e-inherit e-appbar-menu ' + 'e-light'} items={lenguajesDropDownButtonItems} style={{ marginLeft: '10px', marginRight: '15px' }}>Español</DropDownButtonComponent>
+          <DropDownButtonComponent cssClass={'e-inherit e-appbar-menu ' + 'e-light'} items={lenguajesDropDownButtonItems} style={{ marginLeft: '10px', marginRight: '15px' }}>English</DropDownButtonComponent>
           <ButtonComponent cssClass='e-inherit e-appbar-menu' onClick={()=> setLogged(true) }>Login</ButtonComponent>
         
         </>}

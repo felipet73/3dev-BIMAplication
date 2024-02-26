@@ -10,31 +10,31 @@ const Carousel = () => {
     const itemTemplate1 = () => {
         return (<figure className="img-container">
                 {/* <img src="https://ej2.syncfusion.com/react/demos/src/carousel/images/cardinal.png" alt="cardinal" style={{ height: "100%", width: "100%" }}/> */}
-                <img src={require("../assets/images/1.png")} alt="2" style={{ height: "100%", width: "100%" }}/>
+                <img src={require("../assets/images/1.png")} alt="2" style={{ height: "100%", width: "100%", borderRadius:'40px' }}/>
             </figure>);
     };
     const itemTemplate2 = () => {
         return (<figure className="img-container">
                 {/* <img src="https://ej2.syncfusion.com/react/demos/src/carousel/images/hunei.png" alt="hunei" style={{ height: "100%", width: "100%" }}/> */}
-                <img src={require("../assets/images/2.png")} alt="3" style={{ height: "100%", width: "100%" }}/>
+                <img src={require("../assets/images/2.png")} alt="3" style={{ height: "100%", width: "100%", borderRadius:'40px' }}/>
             </figure>);
     };
     const itemTemplate3 = () => {
         return (<figure className="img-container">
                 {/* <img src="https://ej2.syncfusion.com/react/demos/src/carousel/images/costa-rica.png" alt="costa-rica" style={{ height: "100%", width: "100%" }}/> */}
-                <img src={require("../assets/images/3.png")} alt="4" style={{ height: "100%", width: "100%" }}/>
+                <img src={require("../assets/images/3.png")} alt="4" style={{ height: "100%", width: "100%", borderRadius:'40px' }}/>
             </figure>);
     };
     const itemTemplate4 = () => {
         return (<figure className="img-container">
                 {/* <img src="https://ej2.syncfusion.com/react/demos/src/carousel/images/kaohsiung.png" alt="kaohsiung" style={{ height: "100%", width: "100%" }}/> */}
-                <img src={require("../assets/images/4.png")} alt="5" style={{ height: "100%", width: "100%" }}/>
+                <img src={require("../assets/images/4.png")} alt="5" style={{ height: "100%", width: "100%", borderRadius:'40px' }}/>
             </figure>);
     };
     const itemTemplate5 = () => {
         return (<figure className="img-container">
                 {/* <img src="https://ej2.syncfusion.com/react/demos/src/carousel/images/bee-eater.png" alt="bee-eater" style={{ height: "100%", width: "100%" }}/> */}
-                <img src={require("../assets/images/5.png")} alt="6" style={{ height: "100%", width: "100%" }}/>
+                <img src={require("../assets/images/5.png")} alt="6" style={{ height: "100%", width: "100%", borderRadius:'40px' }}/>
             </figure>);
     };
     const previousButtonTemplate = (props:any) => {
